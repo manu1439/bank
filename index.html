@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Banking Application</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <header>
+        <h1>Banking Application</h1>
+        <nav>
+            <ul id="nav-menu">
+                <li><a href="#" data-page="home">Home</a></li>
+                <li><a href="#" data-page="about">About</a></li>
+                <li><a href="#" data-page="contact">Contact</a></li>
+                <li><a href="#" data-page="login">Login</a></li>
+                <li><a href="#" data-page="register">Register</a></li>
+                <li><a href="#" data-page="balance" class="auth-only">Balance</a></li>
+                <li><a href="#" data-page="transfer" class="auth-only">Transfer</a></li>
+                <li><a href="#" data-page="profile" class="auth-only">Profile</a></li>
+                <li><a href="#" id="logout-btn" class="auth-only">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="page active">
+            <h2>Welcome to Your Bank</h2>
+            <p>Manage your finances easily and securely.</p>
+        </section>
+
+        <section id="about" class="page">
+            <h2>About Us</h2>
+            <p>We are committed to providing the best banking experience.</p>
+        </section>
+
+        <section id="contact" class="page">
+            <h2>Contact Us</h2>
+            <p>Email: support@yourbank.com</p>
+            <p>Phone: +1 234 567 8900</p>
+        </section>
+
+        <section id="login" class="page">
+            <h2>Login</h2>
+            <form id="login-form">
+                <label for="login-username">Username:</label>
+                <input type="text" id="login-username" required />
+                <label for="login-password">Password:</label>
+                <input type="password" id="login-password" required />
+                <button type="submit">Login</button>
+            </form>
+            <p id="login-error" class="error-message"></p>
+        </section>
+
+        <section id="register" class="page">
+            <h2>Register</h2>
+            <form id="register-form">
+                <label for="register-username">Username:</label>
+                <input type="text" id="register-username" required />
+                <label for="register-password">Password:</label>
+                <input type="password" id="register-password" required />
+                <button type="submit">Register</button>
+            </form>
+            <p id="register-error" class="error-message"></p>
+            <p id="register-success" class="success-message"></p>
+        </section>
+
+        <section id="balance" class="page">
+            <h2>Your Balance</h2>
+            <p>Current Balance: $<span id="balance-amount">0.00</span></p>
+        </section>
+
+        <section id="transfer" class="page">
+            <h2>Transfer Funds</h2>
+            <form id="transfer-form">
+                <label for="transfer-recipient">Recipient Username:</label>
+                <input type="text" id="transfer-recipient" required />
+                <label for="transfer-amount">Amount:</label>
+                <input type="number" id="transfer-amount" min="0.01" step="0.01" required />
+                <button type="submit">Transfer</button>
+            </form>
+            <p id="transfer-error" class="error-message"></p>
+            <p id="transfer-success" class="success-message"></p>
+        </section>
+
+        <section id="profile" class="page">
+            <h2>Your Profile</h2>
+            <p>Username: <span id="profile-username"></span></p>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
